@@ -11,7 +11,7 @@
           <a class="top-header__logo" href="index.html">
             <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип">
           </a>
-          <span class="top-header__search search">Поиск</span>
+          <input class="top-header__search search" type="search" placeholder="Поиск:">
         </div>
         <div class="top-header__wrapper user-nav">
           <a class="user-nav__link user-nav__link--marker" href="#">Закладки: 0</a>
@@ -86,23 +86,62 @@
         </ul>
         <h1 class="main-content__title">Перфораторы</h1>
       </div>
-      <section class="main-content__filters filters">
+      <form class="main-content__filters filters" action="index.html" method="post">
         <h2 class="filters__title">Фильтр</h2>
-        <span>Производители</span>
-        <ul class="filters__list">
-          <li class="filters__item">Bosch</li>
-          <li class="filters__item">Интерскол</li>
-          <li class="filters__item">Makita</li>
-          <li class="filters__item">Dewalt</li>
-          <li class="filters__item">Hitachi</li>
-        </ul>
-        <span>Питание</span>
-        <ul class="filters__list">
-          <li class="filters__item">Аккумуляторные</li>
-          <li class="filters__item">Сетевые</li>
-        </ul>
-        <span class="filters__button">Показать</span>
-      </section>
+        <fieldset>
+          <legend>Производители</legend>
+          <ul class="filters__item">
+            <li class="filters__list">
+              <label>
+                Bosch
+                <input type="checkbox" name="Bosch" checked>
+              </label>
+            </li>
+            <li class="filters__list">
+              <label>
+                Интерскол
+                <input type="checkbox" name="Интерскол">
+              </label>
+            </li>
+            <li class="filters__list">
+              <label>
+                Makita
+                <input type="checkbox" name="Makita" checked>
+              </label>
+            </li>
+            <li class="filters__list">
+              <label>
+                Dewalt
+                <input type="checkbox" name="Dewalt">
+              </label>
+            </li>
+            <li class="filters__list">
+              <label>
+                Hitachi
+                <input type="checkbox" name="Hitachi">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание</legend>
+          <ul>
+            <li>
+              <label>
+                Аккумуляторные
+                <input type="radio" name="product-group" value="accumulator" checked>
+              </label>
+            </li>
+            <li>
+              <label>
+                Сетевые
+                <input type="radio" name="product-group" value="networked">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" name="show">Показать</button>
+      </form>
       <section class="main-content__catalog catalog-product">
         <h2 class="visually-hidden">Список перфораторов</h2>
         <ul class="catalog-product__list">
@@ -123,7 +162,7 @@
             </figure>
             <p class="item-product__price">
               <b class="item-product__starting-price">22500</b>
-              <b class="item-product__main-price">15500 ₽.</b>
+              <b class="item-product__main-price">15500 &#8381;.</b>
             </p>
           </li>
           <li class="catalog-product__item item-product">
@@ -355,5 +394,11 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <input type="button" name="exit" aria-label="Закрыть">
+      <p>Товар добавлен в корзину</p>
+      <a href="#">Оформить заказ</a>
+      <button type="button" name="button">Продолжить покупки</button>
+    </div>
   </body>
 </html>
