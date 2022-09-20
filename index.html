@@ -383,23 +383,25 @@
           fill="white" />
       </svg>
     </button>
-    <form class="modal-write-form" action="" method="post">
-      <p class="input-wrapper name-user-wrapper">
-        <label for="name-name">Ваше имя:</label>
-        <input class="input-write name-user" type="text" name="name" id="name-name" placeholder="Имя Фамилия">
-      </p>
-      <p class="input-wrapper email-user-wrapper">
-        <label for="email-email">Ваш e-mail:</label>
-        <input class="input-write email-user" type="email" name="email" id="email-email"
-          placeholder="email@example.com">
-      </p>
-      <p class="input-wrapper text-user-wrapper">
-        <label for="textarea-textarea">Текст письма:</label>
-        <textarea class="input-write textarea-user" name="textarea" id="textarea-textarea"
-          placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button button-form">Отправить</button>
-    </form>
+    <div class="modal-write-form-wrapper">
+      <form class="modal-write-form" action="" novalidate>
+        <p class="input-wrapper name-user-wrapper">
+          <label for="name-name">Ваше имя:</label>
+          <input class="input-write name-user" type="text" name="name" id="name-name" placeholder="Имя Фамилия">
+        </p>
+        <p class="input-wrapper email-user-wrapper">
+          <label for="email-email">Ваш e-mail:</label>
+          <input class="input-write email-user" type="email" name="email" id="email-email"
+            placeholder="email@example.com">
+        </p>
+        <p class="input-wrapper text-user-wrapper">
+          <label for="textarea-textarea">Текст письма:</label>
+          <textarea class="input-write textarea-user" name="textarea" id="textarea-textarea"
+            placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-form" type="submit">Отправить</button>
+      </form>
+    </div>
   </section>
   <section class="modal modal-map">
     <button class="modal-close modal-close-map" type="button" aria-label="закрыть">
@@ -409,7 +411,10 @@
           fill="white" />
       </svg>
     </button>
-    <img src="img/map-big.png" alt="путь проезда" width="960" height="573">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.11237852784!2d37.52513333591805!3d55.687033942278966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1659802295620!5m2!1sru!2sru"
+      width="960" height="673" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <script type="module" src="js/main.js"></script>
